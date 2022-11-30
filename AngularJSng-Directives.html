@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body ng-app="">
+<center><h1>Program based on basic angular directives</h1></center>
+<h2>ng-init directives and bind data with expression</h2>
+<div ng-init="radius=50; PI=3.14" >
+ Circumference of a circle of radius 50 is {{ 2*PI*radius}}
+<h2>ng-bind directives</h2>
+ Circle circumference: <span ng-bind="2*PI*radius"></span><br>
+</div>
+<h2>ng-model directives</h2>
+<div>
+<p>Name : <input type="text" ng-model="msg"></p>
+<p>Hello {{msg}}</p>
+</div>
+<h2>ng-init directives and ng-repeat directives for array operations</h2>
+<div ng-init="array=[10,20,30,40]">
+<ol>
+<li ng-repeat="x in array">{{ x }}</li>
+</ol>
+</div>
+<h2>ng-if directives</h2>
+<div ng-init="checked=true">
+EX.NO:05
+DATE: 29.08.22
+Angular JS ng-Directives
+24
+New user : <input type="checkbox" ng-model="checked">
+<br>
+NAME: <input type="text" ng-if="checked"><br>
+<br>
+<h2>ng-readonly directives</h2>
+Read only <input type="text" ng-readonly="checked" value="my programming line"><br>
+<h2>ng-disabled directives</h2>
+disabled <input type="text" ng-disabled ="checked" value="just see"><br>
+</body> </html>
